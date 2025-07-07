@@ -1,23 +1,20 @@
 # Core web framework
-fastapi
-uvicorn[standard]
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
 
-# Machine Learning & AI
-tensorflow
-keras
+# Machine Learning & AI (CPU-only versions for faster installation)
+tensorflow-cpu==2.13.0
+# keras is included with tensorflow now, no need for separate install
 
 # Image processing
-Pillow
-numpy
+Pillow==10.0.1
+numpy==1.24.3
 
 # HTTP requests
-requests
+requests==2.31.0
 
-# CORS middleware (included with FastAPI but explicit for clarity)
-# fastapi already includes starlette which provides CORSMiddleware
+# File handling for FastAPI
+python-multipart==0.0.6
 
-# File handling
-# pathlib is part of Python standard library (Python 3.4+)
-
-# Additional dependencies that might be needed
-python-multipart  # For file uploads in FastAPI
+# Additional optimization
+--find-links https://download.pytorch.org/whl/torch_stable.html
