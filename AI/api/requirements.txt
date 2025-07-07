@@ -3,4 +3,5 @@ uvicorn
 keras==3.1.0
 numpy
 pillow
+requests
 python-multipart
