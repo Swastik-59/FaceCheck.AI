@@ -1,17 +1,17 @@
 # Core web framework
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
+fastapi
+uvicorn[standard]
 
 # Machine Learning & AI
-tensorflow==2.15.0
-keras==2.15.0
+tensorflow
+keras
 
 # Image processing
-Pillow==10.1.0
-numpy==1.24.3
+Pillow
+numpy
 
 # HTTP requests
-requests==2.31.0
+requests
 
 # CORS middleware (included with FastAPI but explicit for clarity)
 # fastapi already includes starlette which provides CORSMiddleware
@@ -20,4 +20,4 @@ requests==2.31.0
 # pathlib is part of Python standard library (Python 3.4+)
 
 # Additional dependencies that might be needed
-python-multipart==0.0.6  # For file uploads in FastAPI
+python-multipart  # For file uploads in FastAPI
