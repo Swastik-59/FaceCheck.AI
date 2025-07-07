@@ -5,7 +5,6 @@ __pycache__/
 
 # Data & model
 AI/dataset/
-AI/facecheck_final.keras
 AI/dataset (2).zip
 
 # Node.js
