@@ -1,20 +1,6 @@
-# Core web framework
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-
-# Machine Learning & AI (CPU-only versions for faster installation)
-tensorflow-cpu==2.13.0
-# keras is included with tensorflow now, no need for separate install
-
-# Image processing
-Pillow==10.0.1
-numpy==1.24.3
-
-# HTTP requests
-requests==2.31.0
-
-# File handling for FastAPI
-python-multipart==0.0.6
-
-# Additional optimization
---find-links https://download.pytorch.org/whl/torch_stable.html
+fastapi
+uvicorn
+keras==3.1.0
+numpy
+pillow
+python-multipart

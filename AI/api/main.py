@@ -1,6 +1,6 @@
 import requests
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.image import img_to_array
+from keras.models import load_model
+from keras.preprocessing.image import img_to_array
 from fastapi import FastAPI, Form, Query, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
