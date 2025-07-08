@@ -327,12 +327,12 @@ const FaceCheckAI: React.FC = () => {
                                     {confidence !== null ? `${confidence}% ${result}` : '--'}
                                 </p>
                                 <div className="grid min-h-[180px] gap-x-4 gap-y-6 grid-cols-[auto_1fr] items-center py-3">
-                                    <p className="text-[#637588] text-[13px] font-bold">Real</p>
+                                    <p className="text-[#637588] text-[13px] font-bold">Fake</p>
                                     <div className="h-full flex-1">
                                         <div className="border-[#637588] bg-[#f0f2f4] border-r-2 h-full" style={{ width: `${fakePercentage || 0}%` }} />
                                     </div>
 
-                                    <p className="text-[#637588] text-[13px] font-bold">Fake</p>
+                                    <p className="text-[#637588] text-[13px] font-bold">Real</p>
                                     <div className="h-full flex-1">
                                         <div className="border-[#637588] bg-[#f0f2f4] border-r-2 h-full" style={{ width: `${realPercentage || 0}%` }} />
                                     </div>

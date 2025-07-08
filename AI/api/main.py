@@ -6,7 +6,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 import numpy as np
 import io
-from pathlib import Path
 
 app = FastAPI()
 
@@ -18,15 +17,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-model_path = Path(__file__).parent.parent / "facecheck_final.keras"
+    
+model_path = "./facecheck_final.keras"
 model = load_model(model_path)
 
 @app.get("/")
 def read_root():
     return {"message": "FaceCheck.AI API is running"}
 
-@app.post("/predict/file")
+@app.post("/predict/file")                  
 async def predict_file(file: UploadFile = File(...)):
     try:
         uploaded_img = Image.open(file.file).convert("RGB")
@@ -35,8 +34,8 @@ async def predict_file(file: UploadFile = File(...)):
         img_array = np.expand_dims(img_array, axis=0) / 255.0
 
         prediction = model.predict(img_array, verbose=0)[0][0]
-        fake_percentage = prediction * 100
-        real_percentage = (1 - prediction) * 100
+        real_percentage = prediction * 100
+        fake_percentage = (1 - prediction) * 100
         classification = "Real" if prediction > 0.5 else "Fake"
         confidence = max(fake_percentage, real_percentage)
 
@@ -63,8 +62,8 @@ async def predict_url(url: str = Form(...)):
         img_array = np.expand_dims(img_array, axis=0) / 255.0
 
         prediction = model.predict(img_array, verbose=0)[0][0]
-        fake_percentage = prediction * 100
-        real_percentage = (1 - prediction) * 100
+        real_percentage = prediction * 100
+        fake_percentage = (1 - prediction) * 100
         classification = "Real" if prediction > 0.5 else "Fake"
         confidence = max(fake_percentage, real_percentage)
 
