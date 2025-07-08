@@ -56,14 +56,6 @@ EXPOSE 8000
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-### Deployment on Render
-1. Connect your GitHub repository to Render
-2. Select "Web Service" and choose Docker environment
-3. Render automatically builds and deploys your containerized API
-4. Environment variables can be configured in Render dashboard
-
----
-
 ## 🧠 Model Performance
 
 The custom-trained model demonstrates high accuracy and generalization performance.
