@@ -1,4 +1,4 @@
-# FaceCheck.AI 🤖
+# FaceCheck.AI 
 
 FaceCheck.AI is a full-stack AI-powered application that detects whether a face is **real** or **AI-generated** using a custom-trained Convolutional Neural Network (CNN) model. It comes with a sleek modern UI built with Next.js and a backend API using FastAPI.
 
