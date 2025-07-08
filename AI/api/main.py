@@ -1,7 +1,7 @@
 import requests
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
-from fastapi import FastAPI, Form, Query, UploadFile, File, HTTPException
+from fastapi import FastAPI, Form, Query, UploadFile, File, HTTPException,Response
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 import numpy as np
@@ -24,9 +24,9 @@ model = load_model(model_path)
 def read_root():
     return {"message": "FaceCheck.AI API is running"}
 
-@app.get("/health")
-def health_check():
-    return {"status": "ok"}
+@app.api_route("/health", methods=["GET", "HEAD"])
+def health():
+    return Response(status_code=200)
 
 @app.post("/predict/file")                  
 async def predict_file(file: UploadFile = File(...)):
