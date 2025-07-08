@@ -66,7 +66,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 ## 🧠 Model Performance
 
-Our custom-trained model demonstrates high accuracy and generalization performance.
+The custom-trained model demonstrates high accuracy and generalization performance.
 
 ### 📊 Evaluation Metrics
 
