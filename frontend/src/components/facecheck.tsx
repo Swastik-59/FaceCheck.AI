@@ -22,6 +22,13 @@ const FaceCheckAI: React.FC = () => {
         setPreviewUrl("");
     };
 
+    
+    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            handleImageCheck();
+        }
+    };
+    
     const handleImageCheck = async () => {
         if (!imageUrl.trim()) {
             toast.error("Please enter an image URL");
@@ -71,12 +78,6 @@ const FaceCheckAI: React.FC = () => {
             toast.error("Failed to analyze image. Please check the URL and try again.");
         } finally {
             setIsAnalyzing(false);
-        }
-    };
-
-    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === 'Enter') {
-            handleImageCheck();
         }
     };
 
