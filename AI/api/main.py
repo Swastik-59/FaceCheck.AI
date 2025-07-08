@@ -24,6 +24,10 @@ model = load_model(model_path)
 def read_root():
     return {"message": "FaceCheck.AI API is running"}
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
 @app.post("/predict/file")                  
 async def predict_file(file: UploadFile = File(...)):
     try:
