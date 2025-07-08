@@ -43,7 +43,7 @@ const FaceCheckAI: React.FC = () => {
             const formData = new FormData();
             formData.append("url", imageUrl);
 
-            const res = await fetch("http://127.0.0.1:8000/predict/url", {
+            const res = await fetch("https://facecheck-ai-t87q.onrender.com/predict/url", {
                 method: "POST",
                 body: formData
             });
@@ -105,7 +105,7 @@ const FaceCheckAI: React.FC = () => {
         formData.append("file", file);
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/predict/file", {
+            const res = await fetch("https://facecheck-ai-t87q.onrender.com/predict/file", {
                 method: "POST",
                 body: formData
             });

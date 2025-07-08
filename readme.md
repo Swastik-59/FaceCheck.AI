@@ -3,8 +3,10 @@
 FaceCheck.AI is a full-stack AI-powered application that detects whether a face is **real** or **AI-generated** using a custom-trained Convolutional Neural Network (CNN) model. It comes with a sleek modern UI built with Next.js and a backend API using FastAPI.
 
 ---
+## Demo
 
-## 🛠️ Tech Stack
+---
+## Tech Stack
 
 ### Frontend
 - **Next.js 14** - React framework for production
@@ -61,43 +63,3 @@ weighted avg       0.92      0.92      0.92     17548
 <p align="center">
   <img src="./AI/assets/confusion matrix.png" width="600" alt="Confusion Matrix">
 </p>
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js 18+ 
-- Python 3.8+
-- npm or yarn
-
-### Frontend Setup
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/facecheck-ai.git
-cd facecheck-ai
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-```
-
-### Backend Setup
-```bash
-# Navigate to backend directory
-cd backend
-
-# Install Python dependencies
-pip install -r requirements.txt
-
-# Run FastAPI server
-uvicorn main:app --reload
-```
-
----
-
-## Demo
-
-*Add screenshots of your application here*
