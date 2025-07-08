@@ -9,13 +9,9 @@ import io
 
 app = FastAPI()
 
-origins = [
-    "https://facecheck--ai.vercel.app/",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins="https://facecheck--ai.vercel.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
