@@ -4,6 +4,7 @@ FaceCheck.AI is a full-stack AI-powered application that detects whether a face 
 
 ---
 ## Demo
+[![Watch the video]](https://raw.githubusercontent.com/Swastik-59/FaceCheck.AI/AI/assets/FaceCheck.AI.mp4)
 
 ---
 ## Tech Stack
