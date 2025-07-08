@@ -3,10 +3,8 @@
 FaceCheck.AI is a full-stack AI-powered application that detects whether a face is **real** or **AI-generated** using a custom-trained Convolutional Neural Network (CNN) model. It comes with a sleek modern UI built with Next.js and a backend API using FastAPI.
 
 ---
-## Demo
 
----
-## Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
 - **Next.js 14** - React framework for production
@@ -31,8 +29,38 @@ FaceCheck.AI is a full-stack AI-powered application that detects whether a face 
 - Custom-trained CNN model on 180,000+ face images
 - Live probability confidence with detailed result breakdown
 - Responsive and clean UI design using Tailwind CSS and Inter/Noto fonts
-- Backend REST API using FastAPI deployed on Render
+- Backend REST API using FastAPI deployed on Render with Docker
 - Frontend deployed on Vercel
+- Containerized deployment for consistent performance across environments
+
+---
+
+## 🐳 Docker Deployment
+
+The backend API is containerized using Docker for consistent deployment on Render.
+
+### Docker Configuration
+```dockerfile
+# Dockerfile example structure
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+```
+
+### Deployment on Render
+1. Connect your GitHub repository to Render
+2. Select "Web Service" and choose Docker environment
+3. Render automatically builds and deploys your containerized API
+4. Environment variables can be configured in Render dashboard
 
 ---
 
@@ -63,3 +91,60 @@ weighted avg       0.92      0.92      0.92     17548
 <p align="center">
   <img src="./AI/assets/confusion matrix.png" width="600" alt="Confusion Matrix">
 </p>
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- Python 3.8+
+- Docker (for containerized deployment)
+- npm or yarn
+
+### Frontend Setup
+```bash
+# Clone the repository
+git clone https://github.com/Swastik-59/FaceCheck.AI.git
+cd facecheck-ai
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+### Backend Setup
+
+#### Local Development
+```bash
+# Navigate to backend directory
+cd backend
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Run FastAPI server
+uvicorn main:app --reload
+```
+
+#### Docker Deployment
+```bash
+# Build Docker image
+docker build -t facecheck-api .
+
+# Run container
+docker run -p 8000:8000 facecheck-api
+
+# Or use docker-compose
+docker-compose up --build
+```
+
+---
+
+## Demo
+
+https://github.com/user-attachments/assets/82edff4e-7e1e-4bf2-b7d4-03fe78c4d9e1
+
+---
