@@ -28,7 +28,7 @@ const FaceCheckAI: React.FC = () => {
             handleImageCheck();
         }
     };
-    
+
     const handleImageCheck = async () => {
         if (!imageUrl.trim()) {
             toast.error("Please enter an image URL");
@@ -176,14 +176,8 @@ const FaceCheckAI: React.FC = () => {
                     </div>
                     <div className="flex flex-1 justify-end">
                         <div className="hidden md:flex items-center gap-9 mr-8">
-                            <Link href="#" className="text-[#111418] text-sm font-medium leading-normal">
-                                How it works
-                            </Link>
-                            <Link href="#" className="text-[#111418] text-sm font-medium leading-normal">
-                                Pricing
-                            </Link>
-                            <Link href="#" className="text-[#111418] text-sm font-medium leading-normal">
-                                API
+                            <Link href="https://github.com/Swastik-59/FaceCheck.AI" className="text-[#111418] text-sm font-medium leading-normal">
+                                Github
                             </Link>
                         </div>
                     </div>
