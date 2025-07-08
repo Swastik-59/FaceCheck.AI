@@ -10,9 +10,13 @@ import io
 app = FastAPI()
 
 # Allow frontend from any origin (temporary for dev)
+origins = [
+    "https://face-check-ai-omega.vercel.app",  # Your frontend URL
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
